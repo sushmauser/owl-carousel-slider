@@ -3,9 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>responsive owl carousel slider</title>
+                <!-- download the owl carousel document -->
+    <link rel="stylesheet" href="owlcarousel/dist/assets/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="owlcarousel/dist/assets/owl.theme.default.min.css">
+                <!-- put the jquery cdn (content delivery network) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="owlcarousel/dist/owl.carousel.min.js"></script>
 </head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 200px 30px;
+    }
+     *{
+        padding:0px;
+        margin: 0px;
+    }
+        .owl-carousel{
+        width:100% ;
+        height:34vh; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       border-radius: 10px;
+        border: 2px solid blue; 
+        }
+ 
+    .owl-carousel img{
+        width:90%;
+        height:90%;
+       object-fit: cover; 
+       border-radius: 10px;
+    }
+    
+ </style>
 <body>
+        <div class="owl-carousel owl-theme owl-loaded">
+            <img src="C:/Users/ebrah/OneDrive/Desktop/yadav/image-slider/1.jpg" alt="">
+            <img src="C:/Users/ebrah/OneDrive/Desktop/yadav/image-slider/2.jpg" alt="">
+            <img src="C:/Users/ebrah/OneDrive/Desktop/yadav/image-slider/3.jpg" alt="">
+            <img src="C:/Users/ebrah/OneDrive/Desktop/yadav/image-slider/4.jpg" alt="">
+            <img src="C:/Users/ebrah/OneDrive/Desktop/yadav/image-slider/5.jpg" alt="">
+            <img src="C:/Users/ebrah/OneDrive/Desktop/yadav/image-slider/1.jpg" alt="">
+            <img src="C:/Users/ebrah/OneDrive/Desktop/yadav/image-slider/2.jpg" alt="">
+            <img src="C:/Users/ebrah/OneDrive/Desktop/yadav/image-slider/3.jpg" alt="">
+            <img src="C:/Users/ebrah/OneDrive/Desktop/yadav/image-slider/4.jpg" alt="">
+            <img src="C:/Users/ebrah/OneDrive/Desktop/yadav/image-slider/5.jpg" alt="">
+        </div>
+
+    
+   
+        <script>
+           $('.owl-carousel').owlCarousel({
+            lazyLoad:true,
+            autoWidth:false,
+            mouseDrag:true,
+            loop:true,
+            margin:10,
+            autoplay:true,
+            autoplayTimeout: 1000,
+            autoplayHoverPause: true,
+            nav:true,
+            dots:true, 
+            // stagePadding: 150,
+            responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+                nav:true
+            },
+            500:{
+                items:3,
+                nav:false
+            },
+            1000:{
+                items:6,
+                nav:true,
+                loop:false
+            }
+        }
+            
+});
+
+        </script>
+    
     
 </body>
 </html>
